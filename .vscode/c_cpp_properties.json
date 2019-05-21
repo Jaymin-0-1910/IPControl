@@ -1,0 +1,41 @@
+{
+	"configurations": [
+		{
+			"name": "Android NDK (ARM, API level 21)",
+			"compilerPath": "/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/armv7a-linux-androideabi21-clang++",
+			"cppStandard": "c++17",
+			"cStandard": "c11",
+			"defines": [
+				"__ANDROID_API__=21"
+			],
+			"includePath": [
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.2/include",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/arm-linux-androideabi",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+				"${workspaceFolder}/native/include"
+			],
+			"intelliSenseMode": "clang-x64"
+		},
+		{
+			"name": "Android NDK (x86, API level 21)",
+			"compilerPath": "/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/i686-linux-android21-clang++",
+			"cppStandard": "c++17",
+			"cStandard": "c11",
+			"defines": [
+				"__ANDROID_API__=21"
+			],
+			"includePath": [
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/c++/v1",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/local/include",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/lib64/clang/8.0.2/include",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include/i686-linux-android",
+				"/home/sjaymin1001/Development/IDE/Android_NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+				"${workspaceFolder}/native/include"
+			],
+			"intelliSenseMode": "clang-x64"
+		}
+	],
+	"version": 4
+}
