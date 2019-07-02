@@ -4,13 +4,13 @@
 
 ## Requirements
 
-1. Android NDK r19c or up
+1. Android NDK r20 or up
 2. `java` command
 3. `zip` command
 
 ## Building
 
-Building is supported on Linux and tested on Ubuntu 19.04 Desktop with NDK r19c.
+Building is supported on Linux and tested on Ubuntu 19.04 Desktop with NDK r20.
 Other platforms may work out with minor changes to scripts. To build,
 
 1. Export NDK path to `ANDROID_NDK_HOME` variable
