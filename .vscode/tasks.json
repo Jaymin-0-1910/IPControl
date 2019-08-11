@@ -10,7 +10,7 @@
 			},
 			"options": {
 				"env": {
-					"ANDROID_NDK_HOME": "/home/sjaymin1001/Development/IDE/Android_NDK"
+					"ANDROID_NDK_HOME": "/home/sjaymin1910/Development/IDE/Android_NDK"
 				}
 			},
 			"command": "${workspaceFolder}/build.sh",
