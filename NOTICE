@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * I have removed many parts of libsocket and adapted others to needs of IPControl,
  * my modified sources of the same can be found at:
- * https://github.com/JayminSuthar1001/libsocket.
+ * https://github.com/JayminSuthar1910/libsocket.
  */
 
 The committers of the libsocket project, all rights reserved
