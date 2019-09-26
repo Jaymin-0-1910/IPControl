@@ -32,12 +32,12 @@
 using namespace std;
 
 static const array<Commandline::Option, 7> option = { {
-	{ "-u",		0,	2,	true,	Config::updateThresholds },
-	{ "-t",		1,	1,	true,	Config::toggleAutomation },
-	{ "-m",		1,	1,	true,	Method::parseAndRun },
-	{ "-d",		1,	1,	false,	Daemon::handleArgs },
-	{ "-i",		0,	0,	true,	Utility::printInfo },
-	{ "--help",	0,	0,	false,	Module::printHelp }
+	{ "--update",	0,	2,	true,	Config::updateThresholds },
+	{ "--toggle",	1,	1,	true,	Config::toggleAutomation },
+	{ "--method",	1,	1,	true,	Method::parseAndRun },
+	{ "--daemon",	1,	1,	false,	Daemon::handleArgs },
+	{ "--info",		0,	0,	true,	Utility::printInfo },
+	{ "--help",		0,	0,	false,	Module::printHelp }
 } };
 
 static const char** argvMain;
@@ -60,7 +60,7 @@ static bool setOptIndexOf(const char* arg) noexcept {
 static bool populateArgs(vector<string>& args) {
 	for (int i = argIndex + 1; i < argcMain && argvMain[i]; i++) {
 
-		if (argvMain[i][0] == '-') {
+		if (argvMain[i][0] == '-' && argvMain[i][1] == '-') {
 			break;
 		}
 		if (args.size() < option[optIndex].argMax) {
