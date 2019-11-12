@@ -42,7 +42,7 @@ enum {
 
 static Method::Info info;
 
-static bool parseAndPopulate(const string& fmtStr) {
+static bool parseAndPopulate(const string &fmtStr) {
 	switch (fmtStr[0]) {
 		case 'e':
 			info.mode = MODE_ENABLED;
@@ -77,7 +77,7 @@ static bool parseAndPopulate(const string& fmtStr) {
 	return true;
 }
 
-void Method::parseAndRun(const vector<string>& args) {
+void Method::parseAndRun(const vector<string> &args) {
 	if (!parseAndPopulate(args[0])) {
 		throw("Invalid format string: " + args[0]);
 	}

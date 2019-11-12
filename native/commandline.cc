@@ -40,13 +40,13 @@ static const array<Commandline::Option, 7> option = { {
 	{ "--help",		0,	0,	false,	Module::printHelp }
 } };
 
-static const char** argvMain;
+static const char **argvMain;
 
 static int optIndex;
 static int argIndex;
 static int argcMain;
 
-static bool setOptIndexOf(const char* arg) noexcept {
+static bool setOptIndexOf(const char *arg) noexcept {
 	optIndex = -1;
 
 	for (int i = 0; i < option.size(); i++) {
@@ -57,7 +57,7 @@ static bool setOptIndexOf(const char* arg) noexcept {
 	return optIndex != -1;
 }
 
-static bool populateArgs(vector<string>& args) {
+static bool populateArgs(vector<string> &args) {
 	for (int i = argIndex + 1; i < argcMain && argvMain[i]; i++) {
 
 		if (argvMain[i][0] == '-' && argvMain[i][1] == '-') {
@@ -71,7 +71,7 @@ static bool populateArgs(vector<string>& args) {
 	return args.size() >= option[optIndex].argMin;
 }
 
-bool Commandline::handleArgs(int argc, const char* argv[]) noexcept {
+bool Commandline::handleArgs(int argc, const char *argv[]) noexcept {
 	argcMain = argc;
 	argvMain = argv;
 
@@ -92,7 +92,7 @@ bool Commandline::handleArgs(int argc, const char* argv[]) noexcept {
 			option[optIndex].handler(args);
 			cout << "Option [" << option[optIndex].key << "] handled successfully!" << endl;
 
-		} catch (const exception& e) {
+		} catch (const exception &e) {
 			cerr << e.what() << endl;
 			return false;
 		}

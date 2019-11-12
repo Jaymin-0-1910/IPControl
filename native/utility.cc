@@ -37,7 +37,7 @@ static bool xfork() {
 	}
 }
 
-void Utility::execDaemon(const vector<string>& args) {
+void Utility::execDaemon(const vector<string> &args) {
 	if (!xfork()) {
 		setsid();
 
@@ -45,20 +45,20 @@ void Utility::execDaemon(const vector<string>& args) {
 			exit(EXIT_SUCCESS);
 
 		} else {
-			const char* argv[args.size() + 1];
+			const char *argv[args.size() + 1];
 			argv[args.size()] = nullptr;
 
 			for (int i = 0; i < args.size(); i++) {
 				argv[i] = args[i].c_str();
 			}
-			if (execvp(Module::SELF_NAME_CLIENT.c_str(), (char* const*) argv) == -1) {
+			if (execvp(Module::SELF_NAME_CLIENT.c_str(), (char *const *) argv) == -1) {
 				throw("Error occured while replacing process");
 			}
 		}
 	}
 }
 
-void Utility::printInfo(const vector<string>&) {
+void Utility::printInfo(const vector<string> &) {
 	cout << "Battery Information\n"
 		<< "\n"
 		<< "Level: " << Battery::getCapacity() << "\n"

@@ -28,12 +28,12 @@ using namespace std;
 static const string SOCKET_PATH = Module::STORAGE + "/.socket";
 
 static socket_server server;
-static socket_client* client;
+static socket_client *client;
 
 static void initServer() {
 	try {
 		server.setup(SOCKET_PATH);
-	} catch (const socket_error& e) {
+	} catch (const socket_error &e) {
 		throw(e.what);
 	}
 }
@@ -48,7 +48,7 @@ int IPC::receiveClient() {
 		client = server.accept();
 		client->recv(&req, sizeof(req));
 
-	} catch (const socket_error& e) {
+	} catch (const socket_error &e) {
 		switch (errno) {
 			case ECONNABORTED:
 			case ECONNRESET:
@@ -64,7 +64,7 @@ void IPC::answerClient(int ret) {
 	try {
 		client->send(&ret, sizeof(ret));
 
-	} catch (const socket_error& e) {
+	} catch (const socket_error &e) {
 		if (errno != ECONNRESET) {
 			throw(e.what);
 		}
@@ -80,7 +80,7 @@ int IPC::requestDaemon(int req) {
 		client.send(&req, sizeof(req));
 		client.recv(&ret, sizeof(ret));
 
-	} catch (const socket_error& e) {
+	} catch (const socket_error &e) {
 		switch (errno) {
 			case ECONNREFUSED:
 			case ECONNRESET:

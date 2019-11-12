@@ -21,5 +21,5 @@
 
 namespace Sanity {
 	const int SLEEP_DELAY = 1;
-	int toLevel(const std::string& lvlStr);
+	int toLevel(const std::string &lvlStr);
 }

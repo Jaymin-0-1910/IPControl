@@ -26,5 +26,5 @@ namespace Database {
 		std::string posVal;
 		std::string negVal;
 	};
-	std::vector<Switch>& getSwitchDB() noexcept;
+	std::vector<Switch> &getSwitchDB() noexcept;
 }

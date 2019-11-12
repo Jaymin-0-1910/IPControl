@@ -40,7 +40,7 @@ static string getEvent(const string& event) {
 	return Shared::getProperty(event, UEVENT);
 }
 
-static void writeTrigger(const string& val) {
+static void writeTrigger(const string &val) {
 	const string trig = Config::getTrigger();
 	ofstream trigger(trig, ios::out | ios::trunc);
 

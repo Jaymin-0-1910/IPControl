@@ -21,6 +21,6 @@
 #include <vector>
 
 namespace Utility {
-	void execDaemon(const std::vector<std::string>& args);
-	void printInfo(const std::vector<std::string>&);
+	void execDaemon(const std::vector<std::string> &args);
+	void printInfo(const std::vector<std::string> &);
 }

@@ -27,6 +27,6 @@ namespace Daemon {
 	bool requestEnabling();
 	bool requestDisabling();
 
-	void handleArgs(const std::vector<std::string>& args);
+	void handleArgs(const std::vector<std::string> &args);
 	[[noreturn]] void runServer() noexcept;
 }

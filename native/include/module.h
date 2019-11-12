@@ -82,5 +82,5 @@ namespace Module {
 		"                    Automation status, disable threshold\n"
 		"                    and enable threshold\n";
 
-	[[noreturn]] void printHelp(const std::vector<std::string>&) noexcept;
+	[[noreturn]] void printHelp(const std::vector<std::string> &) noexcept;
 }

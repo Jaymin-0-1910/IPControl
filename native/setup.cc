@@ -23,7 +23,7 @@
 #include "shared.h"
 
 static void detectSwitch() {
-	for (const Database::Switch& switch_ : Database::getSwitchDB()) {
+	for (const Database::Switch &switch_ : Database::getSwitchDB()) {
 		if (Shared::fileExists(switch_.trigger, true)) {
 			Config::setTrigger(switch_.trigger);
 			Config::setPosVal(switch_.posVal);

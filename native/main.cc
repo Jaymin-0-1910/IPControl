@@ -26,7 +26,7 @@
 
 using namespace std;
 
-int main(int argc, const char* argv[]) noexcept {
+int main(int argc, const char *argv[]) noexcept {
 	if (argv[0] == Module::SELF_NAME_DAEMON) {
 		Daemon::runServer();
 	}
@@ -39,7 +39,7 @@ int main(int argc, const char* argv[]) noexcept {
 
 using namespace std;
 
-int main(int argc, const char* argv[]) noexcept {
+int main(int argc, const char *argv[]) noexcept {
 	cout << "Local test build executing..." << endl;
 }
 

@@ -25,7 +25,7 @@ using namespace std;
 static const int LEVEL_MIN = 0;
 static const int LEVEL_MAX = 100;
 
-int Sanity::toLevel(const string& lvlStr) {
+int Sanity::toLevel(const string &lvlStr) {
 	int level = stoi(lvlStr);
 
 	return level < LEVEL_MIN || level > LEVEL_MAX

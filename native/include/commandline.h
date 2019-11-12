@@ -27,7 +27,7 @@ namespace Commandline {
 		int argMin;
 		int argMax;
 		bool sanitize;
-		std::function<void (const std::vector<std::string>&)> handler;
+		std::function<void (const std::vector<std::string> &)> handler;
 	};
-	bool handleArgs(int argc, const char* argv[]) noexcept;
+	bool handleArgs(int argc, const char *argv[]) noexcept;
 }

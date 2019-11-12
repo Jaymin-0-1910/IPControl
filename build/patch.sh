@@ -39,7 +39,7 @@ static vector<Database::Switch> switch_ = {
 %s
 };
 
-vector<Database::Switch>& Database::getSwitchDB() noexcept {
+vector<Database::Switch> &Database::getSwitchDB() noexcept {
 	return switch_;
 }"
 

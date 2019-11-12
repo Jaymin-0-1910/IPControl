@@ -26,7 +26,7 @@ using namespace std;
 
 static const string VERSION_CODE = "VERSION CODE: __VERSION_CODE__";
 
-[[noreturn]] void Module::printHelp(const vector<string>&) noexcept {
+[[noreturn]] void Module::printHelp(const vector<string> &) noexcept {
 	cerr << HELP << endl;
 	exit(EXIT_FAILURE);
 }

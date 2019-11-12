@@ -120,7 +120,7 @@ static void clientHandler() noexcept {
 		try {
 			handleClient(IPC::receiveClient());
 
-		} catch (const exception& e) {
+		} catch (const exception &e) {
 			cerr << e.what() << endl;
 			IAmKilled = true;
 		}
@@ -137,7 +137,7 @@ static void switchHandler() noexcept {
 			Setup::checkAndSanitize();
 			handleSwitch(switchMode);
 
-		} catch (const exception& e) {
+		} catch (const exception &e) {
 			cerr << e.what() << endl;
 			IAmKilled = true;
 		}
@@ -160,7 +160,7 @@ bool Daemon::requestDisabling() {
 	return IPC::requestDaemon(REQUEST_DISABLE) == RET_VAL_POSITIVE;
 }
 
-void Daemon::handleArgs(const vector<string>& args) {
+void Daemon::handleArgs(const vector<string> &args) {
 
 	if (args[0] == "launch") {
 		if (!isRunning()) {
@@ -183,7 +183,7 @@ void Daemon::handleArgs(const vector<string>& args) {
 		clientHandlerThread = thread(clientHandler);
 		switchHandlerThread = thread(switchHandler);
 
-	} catch (const exception& e) {
+	} catch (const exception &e) {
 		cerr << e.what() << endl;
 		IAmKilled = true;
 	}

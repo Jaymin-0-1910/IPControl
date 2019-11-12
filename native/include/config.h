@@ -29,10 +29,10 @@ namespace Config {
 	std::string getPosVal();
 	std::string getNegVal();
 
-	void setTrigger(const std::string& val);
-	void setPosVal(const std::string& val);
-	void setNegVal(const std::string& val);
+	void setTrigger(const std::string &val);
+	void setPosVal(const std::string &val);
+	void setNegVal(const std::string &val);
 
-	void toggleAutomation(const std::vector<std::string>& args);
-	void updateThresholds(const std::vector<std::string>& args);
+	void toggleAutomation(const std::vector<std::string> &args);
+	void updateThresholds(const std::vector<std::string> &args);
 }

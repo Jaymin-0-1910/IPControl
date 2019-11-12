@@ -20,7 +20,7 @@
 #include <string>
 
 namespace Shared {
-	bool fileExists(const std::string& path, bool checkRW = false) noexcept;
-	std::string getProperty(const std::string& key, const std::string& file);
-	void setProperty(const std::string& key, const std::string& val, const std::string& file);
+	bool fileExists(const std::string &path, bool checkRW = false) noexcept;
+	std::string getProperty(const std::string &key, const std::string &file);
+	void setProperty(const std::string &key, const std::string &val, const std::string &file);
 }

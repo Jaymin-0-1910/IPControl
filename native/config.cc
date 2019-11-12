@@ -41,11 +41,11 @@ static const string AUTOMATION_DISABLED = "false";
 static const string THR_DISABLE_DEF = "70";
 static const string THR_ENABLE_DEF = "60";
 
-static string getValue(const string& key) {
+static string getValue(const string &key) {
 	return Shared::getProperty(key, SAVE_FILE);
 }
 
-static void setValue(const string& key, const string& val) {
+static void setValue(const string &key, const string &val) {
 	Shared::setProperty(key, val, SAVE_FILE);
 }
 
@@ -73,19 +73,19 @@ string Config::getNegVal() {
 	return getValue(NEG_VAL_KEY);
 }
 
-void Config::setTrigger(const string& val) {
+void Config::setTrigger(const string &val) {
 	setValue(TRIGGER_KEY, val);
 }
 
-void Config::setPosVal(const string& val) {
+void Config::setPosVal(const string &val) {
 	setValue(POS_VAL_KEY, val);
 }
 
-void Config::setNegVal(const string& val) {
+void Config::setNegVal(const string &val) {
 	setValue(NEG_VAL_KEY, val);
 }
 
-void Config::toggleAutomation(const vector<string>& args) {
+void Config::toggleAutomation(const vector<string> &args) {
 	if (args[0] == "ON") {
 		setValue(AUTOMATION_KEY, AUTOMATION_ENABLED);
 
@@ -97,7 +97,7 @@ void Config::toggleAutomation(const vector<string>& args) {
 	}
 }
 
-void Config::updateThresholds(const vector<string>& args) {
+void Config::updateThresholds(const vector<string> &args) {
 	if (args.size() == 0) {
 		setValue(THR_DISABLE_KEY, THR_DISABLE_DEF);
 		setValue(THR_ENABLE_KEY, THR_ENABLE_DEF);

@@ -28,5 +28,5 @@ namespace Method {
 		int type;
 		int value;
 	};
-	void parseAndRun(const std::vector<std::string>& args);
+	void parseAndRun(const std::vector<std::string> &args);
 }

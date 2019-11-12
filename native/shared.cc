@@ -25,11 +25,11 @@
 
 using namespace std;
 
-bool Shared::fileExists(const string& path, bool checkRW) noexcept {
+bool Shared::fileExists(const string &path, bool checkRW) noexcept {
 	return checkRW ? ofstream(path).is_open() : ifstream(path).is_open();
 }
 
-string Shared::getProperty(const string& key, const string& file) {
+string Shared::getProperty(const string &key, const string &file) {
 	ifstream propFile(file);
 
 	if (!propFile.is_open()) {
@@ -44,7 +44,7 @@ string Shared::getProperty(const string& key, const string& file) {
 	return "";
 }
 
-void Shared::setProperty(const string& key, const string& val, const string& file) {
+void Shared::setProperty(const string &key, const string &val, const string &file) {
 	const string temp = Module::STORAGE + "/.tempfile";
 
 	{
