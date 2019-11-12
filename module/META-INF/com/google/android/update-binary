@@ -156,7 +156,6 @@ if $SYSTEMLESS; then
 	IPCDIR=$MODULE_ROOT/IPControl
 
 	IPCINFO=$INSTALLER/module.prop
-	DEBUGGER=$INSTALLER/debug.sh
 	BOOTRUN=$INSTALLER/service.sh
 	IPCEXEC=$INSTALLER/bin/ipc_$ARCH
 	CFGFILE=$INSTALLER/ipc.conf
@@ -170,7 +169,7 @@ if $SYSTEMLESS; then
 	ui_print " "
 	print "Copying files"
 	cp -f $IPCEXEC $IPCBIN
-	cp -f $IPCINFO $DEBUGGER $BOOTRUN $CFGFILE $IPCDIR/
+	cp -f $IPCINFO $BOOTRUN $CFGFILE $IPCDIR/
 
 	print "Patching ipc binary"
 	patchstr $UEVENT_DEF $UEVENT_PATH $IPCBIN
@@ -191,7 +190,6 @@ else
 	IPCDIR=$DE_DATA/IPControl
 
 	IPCINFO=$INSTALLER/module.prop
-	DEBUGGER=$INSTALLER/debug.sh
 	BOOTRUN=$INSTALLER/service.sh
 	IPCEXEC=$INSTALLER/bin/ipc_$ARCH
 	CFGFILE=$INSTALLER/ipc.conf
@@ -205,10 +203,10 @@ else
 
 	ui_print " "
 	print "Copying files"
-	cp -f $IPCINFO  $MODINFO
-	cp -f $BOOTRUN  $INITRUN
-	cp -f $IPCEXEC  $IPCBIN
-	cp -f $DEBUGGER $CFGFILE $IPCDIR/
+	cp -f $IPCINFO $MODINFO
+	cp -f $BOOTRUN $INITRUN
+	cp -f $IPCEXEC $IPCBIN
+	cp -f $CFGFILE $IPCDIR/
 
 	print "Patching ipc binary"
 	patchstr $MODULE_ROOT_DEF $DE_DATA     $IPCBIN

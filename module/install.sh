@@ -150,7 +150,7 @@ on_install() {
     x86*) ARCH_32BIT=x86 ;;
   esac
 
-  IPCFILES="bin/ipc_$ARCH_32BIT debug.sh service.sh ipc.conf"
+  IPCFILES="bin/ipc_$ARCH_32BIT service.sh ipc.conf"
 
   ui_print "- Extracting module files"
   unzip -oj "$ZIPFILE" $IPCFILES -d $MODPATH >&2
