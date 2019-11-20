@@ -36,7 +36,7 @@ static const string STATUS_EVENT = "POWER_SUPPLY_STATUS";
 
 static const string STATUS_CHARGING = "Charging";
 
-static string getEvent(const string& event) {
+static string getEvent(const string &event) {
 	return Shared::getProperty(event, UEVENT);
 }
 
